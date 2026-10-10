@@ -1,6 +1,6 @@
 # Kindle Tetris
 
-Native Tetris for jailbroken Kindles (built and aimed at the Oasis 3 / KOA3, ARMv7 hard-float).
+Native Tetris for jailbroken Kindles (built and aimed at the Oasis 3 / KOA3, ARMv7 soft-float, static).
 Launched as a scriptlet from the library. Touch buttons plus the page-turn buttons.
 
 ## Install (one line, in KTerm, Wi-Fi on)

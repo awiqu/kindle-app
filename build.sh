@@ -1,5 +1,5 @@
 #!/bin/sh
-# Cross-compiles dist/tetris for Kindle (ARMv7 hard-float, static musl) using zig.
+# Cross-compiles dist/tetris for Kindle (ARMv7 soft-float, static musl) using zig.
 # Needs: python3, git, make. Zig comes from the `ziglang` pip wheel.
 # Usage: ./build.sh            (output: dist/tetris, dist/SHA256SUMS)
 set -eu
@@ -20,7 +20,7 @@ wrap() { # name, command
 	printf '#!/bin/sh\nexec %s "$@"\n' "$2" >"$WORK/bin/$1"
 	chmod +x "$WORK/bin/$1"
 }
-wrap zcc "$ZIG cc -target arm-linux-musleabihf -mcpu=cortex_a7"
+wrap zcc "$ZIG cc -target arm-linux-musleabi -mcpu=cortex_a7 -mfloat-abi=soft"
 wrap zar "$ZIG ar"
 wrap zranlib "$ZIG ranlib"
 
