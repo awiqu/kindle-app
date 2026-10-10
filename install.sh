@@ -1,8 +1,8 @@
 #!/bin/sh
 # Kindle Tetris installer. Run in KTerm (Wi-Fi on):
-#   curl -fsSL https://raw.githubusercontent.com/awiqu/kindle-app/master/install.sh | sh
+#   curl -4fsSL https://raw.githubusercontent.com/awiqu/kindle-app/master/install.sh | sh
 # Remove:
-#   curl -fsSL https://raw.githubusercontent.com/awiqu/kindle-app/master/install.sh | sh -s uninstall
+#   curl -4fsSL https://raw.githubusercontent.com/awiqu/kindle-app/master/install.sh | sh -s uninstall
 set -e
 
 BASE="${TETRIS_BASE:-https://raw.githubusercontent.com/awiqu/kindle-app/master}"
@@ -22,7 +22,7 @@ fi
 
 fetch() { # url dest
 	if command -v curl >/dev/null 2>&1; then
-		curl -fsSL "$1" -o "$2"
+		curl -4 -fsSL "$1" -o "$2"
 	elif command -v wget >/dev/null 2>&1; then
 		wget -q -O "$2" "$1"
 	else

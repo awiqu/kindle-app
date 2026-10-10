@@ -6,7 +6,7 @@ Launched as a scriptlet from the library. Touch buttons plus the page-turn butto
 ## Install (one line, in KTerm, Wi-Fi on)
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/awiqu/kindle-app/master/install.sh | sh
+curl -4fsSL https://raw.githubusercontent.com/awiqu/kindle-app/master/install.sh | sh
 ```
 
 Then open **Tetris** in the library (the scriptlet can take a few seconds to appear).
@@ -14,7 +14,7 @@ Then open **Tetris** in the library (the scriptlet can take a few seconds to app
 Remove:
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/awiqu/kindle-app/master/install.sh | sh -s uninstall
+curl -4fsSL https://raw.githubusercontent.com/awiqu/kindle-app/master/install.sh | sh -s uninstall
 ```
 
 Without Wi-Fi: copy `dist/tetris`, `launcher/run.sh` to `/mnt/us/extensions/tetris/` and
